@@ -1,0 +1,45 @@
+<% @title = "Flash Meetup" %>
+
+<div id="strap" class="clearfix">
+  <div class="s7">
+    <h2
+      >Flash Meetup
+      <span><%= link_to "Citizen Space", place_path(1) %>, today</span>
+    </h2>
+  </div>
+  <div class="s10">
+    <form method="post">
+      <p>
+        <%= link_to 'Attend this event', events_path %>
+      </p>
+  </div>
+</div>
+
+<div class="clearfix">
+  <div class="s7" style="width: 70%">
+    <p>
+      Event description goes here. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+  </div>
+  <div class="s10" style="width: 30%">
+    <h3>Attending This Event</h3>
+    
+    <ul class="shots">
+      <li>
+        <a href="#" title="view Carol Lee's profile"><img src="/images/headshots/sm/carol.jpg" alt="Carol Lee" width="50px" height="50px" /></a> 
+        <a href="#" title="view Tara Hunt's profile">Carol Lee</a> 
+        <span><a href="#" title="view activity in Chicago">Chicago, IL</a></span>
+      </li>
+      <li>
+        <a href="#" title="view James Iha's profile"><img src="/images/headshots/sm/james.jpg" alt="James Iha" width="50px" height="50px" /></a>
+        <a href="#" title="view James Iha's profile">James Iha</a>
+        <span><a href="#" title="view activity in Chicago">Chicago, IL</a></span>
+      </li>
+      <li>
+        <a href="#" title="view Julia Chylde's profile"><img src="/images/headshots/sm/julia.jpg" alt="Julia Chylde" width="50px" height="50px" /></a>
+        <a href="#" title="view Julia Chyldes's profile">Julia Chylde</a>
+        <span><a href="#" title="view activity in Seattle">Seattle, WA</a></span>        
+      </li>
+    </ul>
+  </div>
+</div>

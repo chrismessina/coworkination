@@ -1,0 +1,23 @@
+<% @title = "CitizenSpace" %>
+
+<div class="vcard">
+  <!--
+    TODO: store images in resized versions on S3
+  -->
+  <%= image_tag @place.photo, :class => 'photo', :width => '100px', :height => '100px' %>
+  <div class="fn org"><%= link_to @place.org, @place.url, :class => 'url' %></div>
+  <div class="adr">
+    <div class="street-address"><%=h @place.street_address %></div>
+    <div>
+      <span class="locality"><%=h @place.locality %></span>,
+      <abbr class="region"><%=h @place.region %></abbr>
+      <span class="postal-code"><%=h @place.postal_code %></span>
+    </div>
+  </div>
+  <div>
+    Phone: <span class="tel"><%=h @place.tel %></span>
+  </div>
+  <div>
+    Email: <span class="email"><%=h @place.email %></span>
+  </div>  
+</div>

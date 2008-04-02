@@ -1,0 +1,112 @@
+<div id="strap" class="clearfix">
+  <h2>Sign in to Coworkination using...</h2>
+</div>
+
+<!--
+  TODO: add .js to clear out textfields when triggering accordion
+-->
+<% form_tag session_path, {:id => "signin-form"} do -%>
+  
+  <div id="signin-options">
+    
+    <h3>OpenID <a href="https://www.myopenid.com/signup" class="signup-link">Sign up for an OpenID</a></h3>
+    
+    <fieldset id="openid">
+
+      <p>
+        <label for="openid_url">OpenID URL:</label>  
+        <%= text_field_tag "openid_url", nil, :class => "openid" %>
+        <!--
+          TODO add "can't login" action - I like MeToday's "amnesia" controller for this!
+        -->        
+        <small>Example: http://username.myopenid.com</small>
+      </p>
+      
+      <p>
+        <%= submit_tag 'Sign in', :disable_with => "Signing in&hellip;", :class => "btn" %>        
+      </p>
+      
+    </fieldset>
+
+  	<h3>Flickr  <a href="http://flickr.com/signup" class="signup-link">Sign up for a Flickr account</a></h3>
+
+  	<fieldset id="flickr">
+
+  		<p>
+  			<a href="http://flickr/services">Click here to authorize Coworkination</a> to access your Flickr account.
+  		</p>
+
+  		<p>
+  		  Note that we never see your password during this process. Instead, we simply need you to prove that you own a Flickr account, so we can associate a Coworkination account for you.
+  		  <!--
+  		    TODO fix Flickr integration
+  		  -->
+  		</p>
+
+  	</fieldset>
+
+    
+  	<h3>Wordpress.com <a href="https://wordpress.com/signup" class="signup-link">Sign up for a Wordpress.com account</a></h3>
+
+  	<fieldset id="wordpress-com">
+
+  	  <p>
+  	    Sign in with your WordPress.com account:  
+  	  </p>
+  
+  	  <p>
+        <strong>http://<%= text_field_tag "wordpress" %>.wordpress.com</strong>  	
+      </p>
+  
+      <p class="option">
+        <%= check_box_tag "remember_me" %> <label for="remember_me">Remember me on this computer</label>
+      </p>
+      
+      <p>
+        <%= submit_tag 'Sign in', :disable_with => "Signing in&hellip;", :class => "btn" %>        
+      </p>
+      
+    </fieldset>
+
+  	<h3>LiveJournal <a href="https://www.livejournal.com/create.bml" class="signup-link">Sign up for a LiveJournal account</a></h3>
+
+  	<fieldset id="livejournal">
+
+  	  <p>
+  	    Sign in with your LiveJournal account:
+  	  </p>
+
+  		<p>
+        <strong>http://<%= text_field_tag "livejournal" %>.livejournal.com</strong>  	
+  		</p>
+
+      <p class="option">
+        <%= check_box_tag "remember_me" %> <label for="remember_me">Remember me on this computer</label>
+      </p>
+
+      <p>
+        <%= submit_tag 'Sign in', :disable_with => "Signing in&hellip;", :class => "btn" %>        
+      </p>
+
+  	</fieldset>
+
+    <h3>AOL  <a href="http://free.aol.com/tryaolfree/" class="signup-link">Sign up for an AOL account</a></h3>
+
+  	<fieldset id="aol">
+
+  		<p>
+        <label for="openid_url">AIM screenname:</label> 
+        <%= text_field_tag "aim_screenname" %>
+      </p>
+      <p class="option">
+        <%= check_box_tag "remember_me" %> <label for="remember_me">Remember me on this computer</label>
+      </p>
+      <p>
+        <%= submit_tag 'Sign in', :disable_with => "Signing in&hellip;", :class => "btn" %>        
+      </p>
+            
+  	</fieldset>
+  	
+  </div>
+
+<% end %>

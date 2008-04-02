@@ -1,0 +1,79 @@
+<%= xhtml_doctype %>
+<%= html_tag %>
+<head>
+  <title><%= "#{@title} | " if @title %> Coworkination</title>
+  <%= stylesheet_link_tag "reset", "scaffold", "web" %>
+  <%= javascript_include_tag :defaults %>   
+  
+  <%= GMap.header %>
+  
+  <script language="javascript">
+    <!--
+    function ClearForm() {
+      document.search.q.value= "";
+    }
+    //-->
+  </script>
+  
+</head>
+<body>
+
+  <% 
+  if params[:debug] 
+  # FIXME: get rid of this block  
+  %>
+    <p>Current user is <%= debug current_person %></p>
+  <% end %>
+
+  <div id="doc">
+    
+    <div id="hd">
+      <h1>
+        <img src="/images/starfish_sm.gif" alt="Starfish">
+        <a href="/" title="Coworkination [home]"><img src="/images/coworkination.gif" alt="Coworkination" /></a></h1>
+            
+    </div>
+
+    <ul id="act">    
+    <% if logged_in? %>
+      <li><%= link_to "Your account", edit_person_path(current_person) %></li>
+      <li><%= link_to "Logout", logout_path %></li>
+    <% else %>
+      <li><%= link_to "Login", new_session_path %></li>
+    <% end %>
+    </ul>
+    
+    <ul id="nav" class="<%= controller.controller_name %>">
+      <li class="places"><%= link_to "Places", places_path %></li>
+      <li class="people"><%= link_to "People", people_path %></li>
+      <li><a href="#" title="">Events</a></li>
+      <li><a href="#" title="">Blog</a></li>
+      <li><a href="#">Wiki</a></li>
+      <li><a href="#">Photos</a></li>
+      <li><a href="#">Chat</a></li>
+    </ul>    
+    
+    <div id="bd" class="clearfix">
+      <%= yield %>
+    </div>
+
+    <div id="ft" class="clearfix">
+      <div class="s7">
+        <ul>
+          <li><a href="#" title="">About</a></li>
+          <li><a href="#" title="">Contact</a></li>
+          <li><a href="#" title="">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div class="s10">
+        <p>Copyright &copy; 2007 <a href="http://citizenagency.com" title="Citizen Agency">Citizen Agency</a></p>
+        <p>Development and design by <a href="http://trisignia.com" title="Trisignia">Trisignia</a></p>
+      </div>
+    </div>    
+    
+  </div>
+
+  <%= javascript_include_tag :defaults %>
+  
+</body>
+<%= end_html_tag %>

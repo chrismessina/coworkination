@@ -1,0 +1,12 @@
+<h1>Editing place</h1>
+
+<%= error_messages_for :place %>
+
+<% form_for(:place, :url => place_path(@place), :html => { :method => :put }) do |f| %>
+  <p>
+    <%= submit_tag "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', place_path(@place) %> |
+<%= link_to 'Back', places_path %>
