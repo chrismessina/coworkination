@@ -1,0 +1,438 @@
+/* Design & Code (c) Trisignia, Inc. */
+
+body {
+	background: #e6e6e6;
+	text-align: center;
+	font: 86%/1.6em "Lucida Grande", Lucida, Verdana, sans-serif;
+	color: #333;
+}	
+	
+	#doc {
+		/* Wrapping Container (for centering/boder purposes) */
+		position: relative;
+		margin: 20px auto;
+		width: 775px;
+		text-align: left;
+	}
+	
+	
+	
+
+
+/* Headings H1-H6 */
+h1 { }
+
+a:hover img{text-decoration: none; background: none;}
+
+h2 { font-weight: bold; }
+
+/*
+TODO: refactor this declaration
+h2 a{float: right; font-size: 0.5em; margin-right: 1em;}
+*/
+
+h3 { font-weight: bold; font-size: 1.2em; margin: 0.5em 0;}
+
+h4 { }
+
+h5 { }
+
+h6 { }
+
+
+
+
+/* Paragraph and Link Styles */
+p { margin: 10px 0;}
+
+  p a { }
+
+blockquote{ font-style: italic;}
+
+strong{
+	font-weight: bold;
+}
+
+small{
+	font-size: 0.6em;
+	color: #999;
+}
+	
+a         { }
+a:link    { }	
+a:visited { }	
+a:hover   { }
+a:active  { }
+
+
+
+
+
+/* Tables*/
+table{font-size: 1em;}
+td{
+	padding: 2px 5px;
+}
+
+span.event, span.checkin, span.update{
+	background: #626c48;
+	color: #fff;
+	padding: 1px 3px;
+}
+span.checkin{background: #6f4c73;}
+span.update{background: #7091a8;}
+
+td.dt{
+	font-weight: bold;
+	color: maroon;
+}
+td p{
+	margin: 0;
+	font-size: 0.9em;
+}
+
+
+/* Forms */
+form#search{
+	background: #f0f0f0;
+	padding: 0 10px;
+	border: 1px solid #ddd;
+	margin: 1em 0;
+}
+label{
+	display: block;
+	width: 8em;
+	float: left;	
+}
+
+form#signin-form {
+  text-align: center;
+  margin: 20px;
+}
+
+#signin-options{
+  width: 80%;
+  text-align: left;
+  margin: 0 auto;
+}
+
+#signin-options h3{
+  background: #eee;
+  padding: 10px 5px;
+}
+
+#signin-options h3 a{
+  font-size: 0.7em;
+  float: right;
+  color: #666;
+  font-weight: normal;
+}
+
+#signin-options fieldset{
+	padding:  5px 10px 5px 70px;
+	background-image: url(/images/icon-openid-50.png);
+	background-repeat: no-repeat;
+	background-position: 5px 10px;
+}
+	fieldset#flickr{ background-image: url(/images/icon-flickr-50.png); }
+	fieldset#wordpress-com{ background-image: url(/images/icon-wordpress-50.png); }
+	fieldset#livejournal{ background-image: url(/images/icon-livejournal-50.png); }
+	fieldset#aol{ background-image: url(/images/icon-aol-50.png); }
+	
+#signin-options label{
+  font-weight: bold;
+  width: auto;
+  margin-right: 1em;
+}
+
+input{
+	padding: 2px 1px;
+	width: 215px;
+	color: #555;
+}
+
+input.openid{
+  background: url(/images/icon-openid-16.png) no-repeat;
+  padding-left: 18px;
+}
+
+p.option label{
+	float: none;
+	display: inline;
+	color: #999;
+	font-size:  0.9em;
+}
+p.option input{
+  width: auto;
+}
+
+form small{
+  display: block;
+  font-size: 0.8em;
+}
+
+input.btn{
+	margin-top: 10px;
+	width: auto;
+}
+
+
+
+
+
+/* Lists */
+ul { margin: 10px;}
+
+ol { }
+
+  li { }
+		li img{border: 1px solid #ccc; padding: 1px;}
+
+#act li, #nav li, #ft li{
+	/* Account, Nav, and Footer lists should all be inline */
+	display:  inline;
+	margin-right: 1em;
+}
+
+
+
+/* Tables */
+table { width: 100%; font-size: 1em; }
+
+  tr { vertical-align: top; }
+
+
+
+
+
+/* Layout Blocks */
+#hd {
+	/* Header */
+	
+}
+
+#act {
+	/* Account links */
+	position: absolute;
+	top: 0; right:  0;
+}
+	#act li{
+		margin: 0 0 0 1em;
+	}
+
+
+#nav {
+	/* Navigation (usually a list) */
+	margin: 5px 0 20px;
+	background: #191919;
+	padding: 5px;
+	color: #fff;
+}
+	#nav a{
+		color:  inherit;	
+		text-decoration: none;
+	}
+	#nav.places li.places a,
+	#nav.people li.people a,
+	#nav.events li.events a,
+	#nav.blog li.blog a {text-decoration: underline;}
+
+#bd{
+	/* body content */
+	background: #fff;
+	padding: 5px 10px;
+}
+
+#mn {
+	/* Main Content Area */
+	width: 460px;
+	float: left;
+}
+
+	#strap{
+		background: #EDF3FE;
+		color: #222;
+		margin: -5px -10px 0;
+		padding: 10px 10px;
+		font-size: 1.5em;
+		border-bottom: 1px solid #ddd;
+	}
+		#strap img{float: left; border: 1px solid #ccc; padding: 1px; margin-right: 5px;}
+		#strap .s10{text-align: right;}
+		#strap .s10 p{margin: 0;}
+
+	#map{margin: 10px 0;}
+
+	#working{
+		background: beige;
+		margin: -10px -10px 0;
+		padding: 5px 10px;
+		font-size: 1.2em;
+	}
+	#events {float: right;}
+
+	.sn{
+		border-bottom: 1px solid #999;
+		margin-bottom: 20px;
+	}
+	.sn ul{
+		margin-bottom: -2px !important;
+		list-style-type: none; margin: 10px 0 0; padding: 1px 20px;
+	}
+	.sn li{
+	  display: inline;
+	  border: 1px solid #999;
+		background: beige;
+	}
+	.sn li a{
+		padding: 0 5px 2px;
+		text-decoration: none;
+	}
+	.sn li a:hover{
+		background-color: #fff;
+		color: #333;
+	}
+	.sn li.active{
+		border-bottom: 1px solid #fff;
+		background: #fff;
+	}
+
+#checkin{
+}
+	#checkin h3{
+		margin: 0;
+	}
+#wall{
+	border: 1px solid #ccc;
+	padding: 5px;
+	background: #eee;
+}
+	#wall h3{
+		font-size: 1em;
+		background: #ccc;
+		margin: -5px;
+		padding: 2px 5px;
+	}
+	#wall label{width: auto;}
+	#wall textarea{
+		width: 98%;
+		padding: 2px;
+		font-family: "lucida grande", helvetica, verdana, "sans serif";
+		color: #666;
+		font-size: 0.9em;
+	}
+
+#sd {
+	/* Sidebar Content */
+	width: 315px;
+	float: right;
+}
+
+#sd h2, #sd div{
+	padding: 10px 5px;
+}
+
+	#sub{
+		background:  navy url(/images/sub_off.gif) repeat-x;
+		height: 30px;
+	}
+		#sub li{
+			display: block;
+			float: left;			
+			padding: 0 5px;
+			height: 30px;
+			border-right: 1px solid navy;
+		}
+			#sub li.on{
+				background: darkblue url(/images/sub_on.gif) repeat-x;
+			}
+		#sub a{
+			display: block;
+			padding-top: 5px;
+			color: #D5E2FB;
+			text-decoration: none;
+		}
+	#meta{
+		background-color: #f3f3f3;
+		padding: 10px 5px;
+		border-bottom: 1px solid #ccc;
+	}
+	
+#ft {
+	/* Footer Content */
+	margin-top: 50px;
+}
+	#ft .s10{
+		text-align: right;
+	}
+
+
+
+
+/* Class-ified Blocks (for repeating elements) */
+.s7, .s10{
+	/* splits */
+	width: 49%;
+	float:  left;
+}
+.s10{
+	float:  right;
+}
+
+.cols{width: 66%; float: left;}
+	.cols .vcard div{height: 70px;}
+.col3{width: 33%; float: left;}
+
+.bio{clear: both; height: 85px; margin-bottom: 10px;}
+	.bio.odd{background: #f0f0f0; border: 1px solid #ccc; border-width: 1px 0;}
+	.bio .hs{width: 56px; float: left; margin-right: 10px;}
+
+.vcard{height: 10em; float: left;}
+	.vcard h2{background: none; margin: 0; padding: 0; border: 0;}
+	.vcard h2 a{float: none;}
+	.vcard .adr{font-size: 0.8em; font-weight: 200;}
+
+#bd ul{
+	list-style-type: square;
+	padding-left: 10px;
+}
+
+ul.shots li{
+	list-style-type: none;
+	margin-left: -10px !important;
+	margin-bottom: 5px;	
+}
+	ul.shots li.more{
+		padding-left: 59px;
+	}
+	ul.shots img{
+		float: left; margin-right: 5px; margin-left: -2px;
+	}
+	ul span, #working span, h2 span{
+		display: block; color: #999; font-size: 0.9em;
+	}
+	
+div.menu div{float: left; margin-right: 10px; margin-bottom: 10px;}
+	div.menu img{border: 1px solid #ccc; padding: 1px;}
+
+/* ---------- Hacks ---------- */
+
+/* Clear Floats - http://www.positioniseverything.net/easyclearing.html */
+	.clearfix:after, ul.shots li:after {
+	    content: "."; 
+	    display: block; 
+	    height: 0; 
+	    clear: both; 
+	    visibility: hidden;
+	}
+
+	.clearfix, ul.shots li {display: block;}
+
+	/* Hides from IE-mac \*/
+	* html .clearfix {height: 1%;}
+	.clearfix {display: block;}
+	/* End hide from IE-mac */
+
+
+
+

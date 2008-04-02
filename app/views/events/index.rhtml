@@ -1,0 +1,92 @@
+<% @title = "Events" %>
+
+<div id="strap" class="clearfix">
+  <div class="s7">
+    <h2>Events</h2>
+  </div>
+  <div class="s10">
+    <form method="post">
+      <p>
+        <%= link_to 'Add an event', new_event_path %>  or 
+        <input type="text" name="q" value="Search for events" />
+        <input type="submit" value="Go" class="btn" />
+      </p>
+  </div>
+</div>
+
+<div class="clearfix">
+  <div class="s7" style="width: 70%">
+    <h3>Upcoming Events</h3>
+
+    <table>
+      <tr>
+        <td class="dt">Today</td>
+        <td>
+          <h4><%= link_to "Flash Meetup", event_path(1) %></h4>
+          <p><%= link_to "Citizen Space", place_path(1), :title => "view Citizen Space profile" %></p>
+        </td>
+        <td>
+          12 people
+        </td>
+      </tr>
+      <tr>
+        <td class="dt">Tomorrow</td>
+        <td>
+          <h4><%= link_to "ActionScripting", event_path(1) %></h4>
+          <p><%= link_to "Independents Hall", place_path(1), :title => "view Independents Hall profile" %></p>
+        </td>
+        <td>
+          7 people
+        </td>
+      </tr>
+      <tr>
+        <td class="dt">Thurs, 6/21</td>
+        <td>
+          <h4><%= link_to "HacketyHackathon", event_path(1) %></h4>
+          <p><%= link_to "DC Caucus", place_path(1), :title => "view DC Caucus profile" %></p>
+        </td>
+        <td>
+          28 people
+        </td>
+      </tr>
+      <tr>
+        <td class="dt">Fri, 6/22</td>
+        <td>
+          <h4><%= link_to "Project Planning for Professionals", event_path(1) %></h4>
+          <p><%= link_to "Cube Space", place_path(1), :title => "view Cube Space profile" %></p>
+        </td>
+        <td>
+          18 people
+        </td>
+      </tr>
+      <tr>
+        <td class="dt">Sat, 6/23</td>
+        <td>
+          <h4><%= link_to "Screening Notes", event_path(1) %></h4>
+          <p><%= link_to "Cube Space", place_path(1), :title => "view Cube Space profile" %></p>
+        </td>
+        <td>
+          14 people
+        </td>
+      </tr>
+    </table>
+  </div> 
+  <div class="s10" style="width: 29%">
+    <h3>Places</h3>
+      <ul>
+        <li><%= link_to "Near me", :action => "index" %></li>
+        <li><%= link_to "My favorite places", :action => "index" %></li>
+        <li><%= link_to "San Francisco, CA", :action => "index" %></li>
+        <li><%= link_to "Anywhere", :action => "index" %></li>
+      </ul>
+      
+    <h3>Categories</h3>
+    <ul><!-- TODO: decide on categories -->
+      <li><%= link_to "Design", :action => "index" %></li>      
+      <li><%= link_to "Going Green", :action => "index" %></li>      
+      <li><%= link_to "Programming", :action => "index" %></li>
+      <li><%= link_to "Project Management", :action => "index" %></li>
+      <li><%= link_to "more...", :action => "index" %></li>      
+    </ul>
+  </div> 
+</div>

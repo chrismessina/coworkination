@@ -1,0 +1,14 @@
+#Fill here the Google Maps API keys for your application
+#In this sample:
+#For development and test, we have only one possible host (localhost:3000), so there is only a single key associated with the mode.
+#In production, the app can be accessed through 2 different hosts: thepochisuperstarmegashow.com and exmaple.com. There then needs a 2-key hash. If you deployed to one host, only the API key would be needed (as in development and test).
+
+development:
+  ABQIAAAAFRogkAGZwA6pZXIWO99SzRTJQa0g3IQ9GZqIMmInSLzwtGDKaBQ8i94whxwmpgtNtlmmi2ZvGZIUjg
+
+test:
+  ABQIAAAAFRogkAGZwA6pZXIWO99SzRRK2setmT8q05nqmlIlHitKXcjJThRpywDZ0tT2pB-lAIvD41aIPheB8A
+
+production:
+ coworkination.com:
+   ABQIAAAAFRogkAGZwA6pZXIWO99SzRRK2setmT8q05nqmlIlHitKXcjJThRpywDZ0tT2pB-lAIvD41aIPheB8A

@@ -1,0 +1,15 @@
+<div id="strap" class="clearfix">
+  <div class="s7">
+    <h2>Coworking Locations</h2>
+  </div>
+  <div class="s10">
+    <form name="search" method="get" action="/places;search">
+      <p>
+        <%= link_to 'Add a place', new_place_path %>  or 
+        <input type="text" name="q" value="search for a location" onfocus="ClearForm();"/>
+        <input type="submit" value="Go" class="btn" />
+      </p>
+  </div>
+</div>
+<%= @map.to_html %>  
+<%= @map.div(:width => 755, :height => 474) %>

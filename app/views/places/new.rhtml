@@ -1,0 +1,19 @@
+<div id="mn">
+  <img src="/images/citizen_space.jpg" alt="Google Map" />
+</div>
+
+<div id="sd">
+  <ul id="sub">
+    <li><a href="#" title="">Find a space</a></li>
+    <li class="on"><a href="#" title="">Add a space</a></li>
+  </ul>
+  <div id="meta">
+    <% form_for(:place, :url => places_path) do |f| %>
+      <%= render :partial => 'form', :locals => {:f => f} %>
+      <p>
+        <%= submit_tag 'Submit', :class => 'sub' %>
+      </p>
+    <% end %>
+  </div>
+</div>
+
