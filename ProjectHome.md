@@ -1,0 +1,1 @@
+Coworkination is a collaborative website for listing coworking spaces around the world. It is currently written in Ruby on Rails and requires a great deal of work to get off the ground.
